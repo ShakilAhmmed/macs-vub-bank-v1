@@ -8,6 +8,10 @@ public class Client {
         this.pin = pin;
     }
 
+    public int getId() {
+        return this.id;
+    }
+
     public boolean pinMatch(int pin) {
         return this.pin == pin;
     }
