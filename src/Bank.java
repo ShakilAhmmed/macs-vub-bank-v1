@@ -65,11 +65,28 @@ public class Bank {
     }
 
     public boolean removeClient(int clientId) {
-        return true;
+        for (Client client : clientAccountMap.keySet()) {
+            if (client.getId() == clientId) {
+                clientAccountMap.remove(client);
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean removeAccount(String accountNumber) {
-        return true;
+        if (this.session == null) {
+            System.out.println("No Client is Logged In");
+            return false;
+        }
+        List<Account> accounts = clientAccountMap.get(session);
+        for (Account account : accounts) {
+            if (account.accountNumber == accountNumber) {
+                accounts.remove(account);
+                return true;
+            }
+        }
+        return false;
     }
 
 }
