@@ -11,19 +11,19 @@ public class Bank {
     }
 
     public boolean transfer(String accFrom, String accTo, double amount) {
-
+        return true;
     }
 
     public boolean login() {
-
+        return true;
     }
 
     public boolean addAccount(String accountNumber) {
-
+        return true;
     }
 
     public boolean addClient(int clientId) {
-
+        return true;
     }
 
     public void showAccounts() {
@@ -31,11 +31,11 @@ public class Bank {
     }
 
     public boolean removeClient(int clientId) {
-
+        return true;
     }
 
     public boolean removeAccount(String accountNumber) {
-
+        return true;
     }
 
 }
