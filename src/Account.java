@@ -12,6 +12,10 @@ public class Account {
         if (amount < 0) {
             return false;
         }
+        if (amount > this.balance) {
+            System.out.println("Insufficient funds");
+            return false;
+        }
         this.balance -= amount;
         return true;
     }
